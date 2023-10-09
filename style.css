@@ -1,0 +1,796 @@
+/*
+Theme Name: team
+Theme URI: https://wordpress.org/themes/team/
+Author: Alina
+Author URI: https://wordpress.org/
+Description: theme 
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: team
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Yeseva+One&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container-wrapper {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+  color: #000;
+}
+
+.top_wrapper {
+  position: relative;
+}
+
+.title_section {
+  font-family: "Yeseva One", "cursive";
+  font-size: 100px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  max-width: 901px;
+}
+
+.title_section_white {
+  color: #fff;
+  max-width: 476px;
+}
+
+.subtitle_section {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  text-transform: capitalize;
+  color: var(--text, #74787C);
+}
+
+.subtitle_section_white {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: var(--White, #FFF);
+  max-width: 476px;
+}
+
+.top_subtitle {
+  padding-top: 100px;
+  max-width: 843px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.top_image_right {
+  position: absolute;
+  right: -0;
+  top: -16px;
+}
+
+.top_image_left {
+  position: absolute;
+  left: -0;
+  top: 30%;
+}
+
+.top_number_title {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.top_number_descr {
+  font-size: 18px;
+}
+
+.increase_box {
+    margin-bottom: 80px;
+    justify-content: center;
+    gap: 80px;
+}
+
+.top_btn {
+  height: 60px;
+  padding: 20px 34px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--Black, #000);
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.top_btn-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.profit_title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 234px;
+}
+
+.d-grid {
+  gap: 34px;
+}
+
+.profit_items {
+    padding-top: 180px;
+    gap: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profit_descr {
+  line-height: 28px;
+  min-width: 332px;
+  font-size: 16px;
+  max-width: 332px;
+}
+
+.profit_item {
+  border: 1px solid;
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  padding: 40px;
+}
+
+.case_studies_section {
+  background-color: #000;
+  height: 817px;
+  padding-top: 145px;
+  margin-top: 130px;
+}
+/* .case_studies_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} */
+
+.primary_btn {
+  height: 60px;
+  padding: 20px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  border-top: 1px solid var(--White, #FFF);
+  border-right: 1px solid var(--White, #FFF);
+  border-bottom: 3px solid var(--White, #FFF);
+  border-left: 1px solid var(--White, #FFF);
+  background-color: transparent;
+}
+
+.primary_btn-link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--White, var(--White, #FFF));
+  text-decoration: none;
+}
+
+.left-side {
+  width: 470px;
+  display: grid;
+  gap: 30px;
+}
+
+.tab {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+
+.tablinks {
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 1px solid white;
+  background: transparent;
+  color: var(--White, var(--White, #FFF));
+}
+
+.digital_experience_section {
+  padding-top: 130px;
+  position: relative;
+}
+
+.digital_experience_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.digital_experience_wrapper_right-side {
+  display: grid;
+  width: 764px;
+}
+
+.digital_experience_title {
+  margin-bottom: 40px;
+}
+
+.digital_experience_subtitle {
+  margin-bottom: 40px;
+}
+
+.digital_experience_images_big {
+  position: absolute;
+  left: 0;
+  width: 500px;
+}
+
+.digital_experience_images_small {
+  position: absolute;
+  z-index: 1;
+  left: 25%;
+  top: 30%;
+  width: 250px;
+}
+
+.general_btn {
+  display: inline-flex;
+  height: 60px;
+  padding: 20px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--Black, #000);
+  border-right: 1px solid var(--Black, #000);
+  border-bottom: 3px solid var(--Black, #000);
+  border-left: 1px solid var(--Black, #000);
+  background: transparent;
+}
+
+.general_btn-link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--Black, #000);
+  text-decoration: none;
+}
+
+.quote_section {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background-image: url(./image.jpg);
+    background-position:center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-top: 130px;
+}
+
+.quetion_inner {
+  justify-content: end;
+}
+
+.quote_title {
+  max-width: 764px;
+  padding-top: 130px;
+  margin-bottom: 70px;
+}
+
+.quote_subtitle {
+  max-width: 640px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 24px;
+}
+
+.quote_bg_image {
+  position: absolute;
+  z-index: -1;
+}
+
+.quote_author {
+  font-family: "Yeseva One", "cursive";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  text-transform: capitalize;
+  font-size: 32px;
+  max-width: 300px;
+  color: var(--White, var(--White, #FFF));
+  position: absolute;
+  left: 26%;
+  right: 0;
+  margin: 0 auto;
+  bottom: 24%;
+}
+
+.quote_author::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: -86px;
+  width: 60px;
+  height: 5px;
+  background: var(--White, #FFF);
+}
+
+.form_section {
+  padding-top: 300px;
+}
+
+.form_title {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.form_subtitle {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+span {
+  color: var(--Black, #000);
+}
+
+/* input */
+.form_input {
+  position: relative;
+}
+
+.wpcf7-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wpcf7-email {
+  width: 565px;
+  height: 80px;
+  background: transparent;
+  border-top: 1px solid var(--Black, #000);
+  border-bottom: 2px solid var(--Black, #000);
+  border-left: 1px solid var(--Black, #000);
+  border-right: 1px solid var(--Black, #000);
+}
+
+.wpcf7-submit {
+  height: 60px;
+  padding: 20px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--White, var(--White, #FFF));
+  background: var(--Black, #000);
+  position: absolute;
+  left: 65%;
+  top: 10px;
+  border: none;
+}
+
+.companies_wrapper {
+  margin-top: 130px;
+  width: 100%;
+  height: 255px;
+  background: var(--Gray, #F2F2F2);
+  position: absolute;
+}
+
+.companies_title {
+  padding-top: 70px;
+  margin-bottom: 56px;
+  font-size: 24px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.companies_title::before {
+  left: 12%;
+}
+
+.companies_title::after,
+.companies_title::before {
+  content: "";
+  position: absolute;
+  width: 337px;
+  border: 1px solid #000;
+  opacity: 0.5;
+  top: 83px;
+  right: 12%;
+}
+
+.companies_items {
+  gap: 120px;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.wpcf7-form-control-wrap:before {
+  content: "Email Adress";
+  position: absolute;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  color: var(--text, #74787C);
+  padding: 29px 0 24px 40px;
+}
+
+
+
+
+@media(max-width:1671px){
+    .top_image_left{
+       display: none;
+    }
+    .top_image_right{
+        top: 105px;
+        max-width: 440px;
+    }
+    
+    .top_subtitle{
+        margin: 0 0 70px 0;
+        padding-top: 80px;
+    }
+    .increase_box{
+        justify-content: start;
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width:1420px){
+    .top_subtitle{
+        padding-top: 50px;
+    }
+    .increase_box{
+        margin-bottom: 50px;
+    }
+    .top_btn{
+        position: static;
+    }
+    .profit_items{
+        padding-top: 130px;
+    }
+    .top_image_right{
+        max-width: 400px;
+    }
+    .digital_experience_images_small{
+        display: none;
+    }
+    .quote_author{
+        left: 34%;
+    }
+    .form_section {
+    padding-top: 130px;
+    }
+    .companies_title::after, 
+    .companies_title::before {
+        width: 200px;
+    }
+}
+
+@media(max-width:1280px){
+    .top_image_right{
+       top: 0;
+    }
+    .profit_items{
+        padding-top: 80px;
+    }
+    .profit_item{
+        padding: 30px 0 30px 30px;
+        gap: 20px;
+    }
+    .title_section{
+        font-size: 80px;
+    }
+    .top_number_title{
+        font-size: 50px;
+    }
+    .profit_title{
+        line-height: 36px;
+        font-size: 25px;
+    }
+    .digital_experience_images_big{
+        top: 130px;
+        max-width: 400px;
+    }
+    .quote_author{
+        top: 54%;
+        left: 24%;
+    }
+    .companies_title{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .companies_items{
+        gap: 0;
+        align-items:center;
+        justify-items:center;
+    }
+}
+
+@media(max-width:1024px){
+    .top_subtitle{
+        max-width: 600px;
+    }
+    .profit_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 80px;
+    }
+    .digital_experience_wrapper {
+        flex-direction: inherit;
+    }
+    .digital_experience_images_big{
+        display: none;
+    }
+    .quetion_inner {
+        justify-content: start;
+    }
+    .companies_title::after, 
+    .companies_title::before {
+        width: 100px;
+    }
+}
+
+@media(max-width:768px){
+    .top_image_right{
+        display: none;
+    }
+    .increase_box{
+        gap: 50px;
+    }
+    .inrease_items{
+        text-align: center;
+    }
+    .top_number_title {
+        font-size: 50px;
+    }
+    .top_number_descr {
+        line-height: 26px;
+    }
+    .profit_item {
+        max-width: 338px;
+        padding: 20px 0 20px 20px;
+    }
+    .top_btn{
+        display: flex;
+        margin: 0 auto;
+    }
+    .digital_experience_wrapper_right-side {
+        max-width: 100%;
+    }
+    .quote_author{
+        right: 0;
+        bottom: 0;
+        top: 77%;
+        margin: 0;
+    }
+    .companies_title::after, 
+    .companies_title::before {
+        display: none;
+    }
+    .logo{
+        width: 100px;
+    }
+}
+
+@media(max-width:750px){
+    .top_title,
+    .digital_experience_title,
+    .title_section_white,
+    .form_title {
+        font-size: 60px;
+    }
+   .profit_items{
+       justify-content: stretch;
+       grid-template-columns: 1fr;
+   }
+   .profit_item {
+        max-width: 100%;
+   }
+   .form_title{
+        margin-bottom: 40px;
+   }
+   .form_discount{
+    font-size: 20px;
+   }
+}
+
+@media(max-width:590px){
+    .wpcf7-form-control-wrap:before{
+        padding: 15px;
+        font-size: 14px;
+    }
+    .wpcf7-email {
+        height: 50px;
+        width: 400px;
+    }
+    .wpcf7-submit {
+        padding: 15px 15px;
+        font-size: 16px;
+        height: 50px;
+        top:0;
+    }
+    .companies_wrapper{
+        height: 300px;
+    }
+    .companies_items{
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    }
+}
+
+@media(max-width:550px){
+    .top_title {
+        line-height: 65px;
+        font-size: 50px;
+    }
+    .top_subtitle {
+        padding-top: 20px;
+    }
+    .increase_box{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:470px){
+    .wpcf7-form{
+        justify-content: center;
+        gap: 15px;
+    }
+   .wpcf7-email{
+    margin-bottom: 15px;
+   } 
+    .wpcf7-submit{
+        position: static;
+        width: 100%;
+    } 
+    .companies_wrapper{
+        margin-top: 80px;
+    }
+}
+
+@media(max-width:425px){
+    .wpcf7-email {
+        width: 320px;
+        height: 50px;
+    }
+}    
+
+@media(max-width:410px){
+    .profit_item{
+        padding: 0;
+        border:none;
+    }
+}
+
+@media(max-width:392px){
+    .top_title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .top_subtitle,
+    .quote_subtitle{
+        padding-top: 16px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .quote_author{
+        font-size: 20px;
+        top: 57%;
+    }
+    .quote_author::before {
+        top: 24px;
+        left: -62px;
+        width: 45px;
+        height: 1px;
+    }
+}
+
+@media(max-width:372px){
+    .digital_experience_section {
+    padding-top: 80px;
+    position: relative;
+}
+    .top_title,  
+    .digital_experience_title,
+    .title_section_white,
+    .form_title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .digital_experience_subtitle{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .top_subtitle {
+        padding-top: 16px;
+    }
+    .title_section_white{
+        margin-bottom: 0;
+    }
+    .quote_author{
+        top: 43%;
+    }
+}
+
+@media(max-width:366px){
+    .companies_wrapper{
+        height: 550px;
+        width: 360px;
+    }
+    .companies_items {
+        gap: 30px;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .logo{
+        width: 150px;
+    }
+}
+
+@media(max-width:355px){
+    .quote_section{
+        height: 600px;
+        width: 360px;
+    }
+    .form_section{
+        width: 360px;
+    }
+    .quote_author{
+        top: 58%;
+    }
+}
+
