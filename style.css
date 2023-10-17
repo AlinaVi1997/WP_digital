@@ -88,11 +88,12 @@ p {
 }
 
 .top_number_title {
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: capitalize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    font-family: "Yeseva One", "cursive";
+    font-size: 60px;
 }
 
 .top_number_descr {
@@ -125,10 +126,11 @@ p {
 }
 
 .profit_title {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 234px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 234px;
+    font-family: "Yeseva One", "cursive";
 }
 
 .d-grid {
@@ -162,10 +164,16 @@ p {
   padding-top: 145px;
   margin-top: 130px;
 }
-/* .case_studies_wrapper{
+
+.case_studies_wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-} */
+    grid-template-columns: 470px 1fr;
+    gap: 80px;
+    align-items: baseline;
+}
+.right-side{
+    min-width: 0;
+}
 
 .primary_btn {
   height: 60px;
@@ -191,7 +199,7 @@ p {
 }
 
 .left-side {
-  width: 470px;
+  max-width: 470px;
   display: grid;
   gap: 30px;
 }
@@ -204,24 +212,19 @@ p {
   justify-content: flex-end;
   margin-bottom: 30px;
   overflow: hidden;
+  cursor:pointer;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
+
+.tablinks.active {
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-  color: #000;
-}
-
-/* Style the tab content */
 .tabcontent {
   display: none;
 }
+
 
 .tablinks {
   padding: 12px 20px;
@@ -428,11 +431,12 @@ span {
 }
 
 .companies_title {
-  padding-top: 70px;
-  margin-bottom: 56px;
-  font-size: 24px;
-  text-align: center;
-  max-width: 100%;
+    margin-bottom: 56px;
+    font-size: 24px;
+    text-align: center;
+    max-width: 100%;
+    font-family: "Yeseva One", "cursive";
+    padding-top: 70px;
 }
 
 .companies_title::before {
@@ -466,8 +470,6 @@ span {
   color: var(--text, #74787C);
   padding: 29px 0 24px 40px;
 }
-
-
 
 
 @media(max-width:1671px){
@@ -608,6 +610,20 @@ span {
         display: flex;
         margin: 0 auto;
     }
+    .case_studies_section{
+        padding-top: 80px;
+        height: 960px;
+    }
+    .tab{
+        gap:0;
+        justify-content: flex-start;
+    }
+    .tablinks{
+        font-size: 14px;
+    }
+    .case_studies_wrapper{
+        grid-template-columns: 1fr;
+    }
     .digital_experience_wrapper_right-side {
         max-width: 100%;
     }
@@ -627,10 +643,7 @@ span {
 }
 
 @media(max-width:750px){
-    .top_title,
-    .digital_experience_title,
-    .title_section_white,
-    .form_title {
+    .title_section{
         font-size: 60px;
     }
    .profit_items{
@@ -682,6 +695,26 @@ span {
     }
     .increase_box{
         flex-direction: column;
+    }
+    .tab{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+    }
+    .case_studies_section {
+        height: 130%;
+    }
+}
+
+@media(max-width:500px){
+    .case_studies_section{
+        height: 650px;
+    }
+    .right-side{
+        display: none;
+    }
+    .subtitle_section_white{
+        max-width: 400px;
     }
 }
 
@@ -737,6 +770,9 @@ span {
         width: 45px;
         height: 1px;
     }
+    .tablinks{
+        font-size: 10px;
+    }
 }
 
 @media(max-width:372px){
@@ -782,7 +818,8 @@ span {
 }
 
 @media(max-width:355px){
-    .quote_section{
+    .quote_section,
+    .case_studies_section{
         height: 600px;
         width: 360px;
     }

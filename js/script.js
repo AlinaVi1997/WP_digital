@@ -1,35 +1,44 @@
 // Slick-slider  
 $(document).ready(function () {
-  $('.team-slider').slick({
-    dots: false,
-      arrows: false,
-    infinite:true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  });
+    $('.team-slider').slick({
+        arrows: false,
+        infinite:true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: false,
+        variableWidth: true,
+        responsive: [
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 });
 
-// Tabs
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-// var element = document.getElementById("defaultOpen");
-// if (element) {
-//     element.click();
-// }
-    
-jQuery(document).ready(function() {
-  jQuery("#defaultOpen").click();
+// Tabs
+$(document).ready(function() {
+  // Початкове встановлення активної вкладки
+  $("#content-1").show();
+  $("#tab-1").addClass("active");
+
+  // Клік на вкладці
+  $(".tablinks").click(function() {
+    $(".tablinks").removeClass("active");
+    $(".tabcontent").hide();
+    $(this).addClass("active");
+    var contentId = $(this).attr("id").replace("tab", "content");
+    $("#" + contentId).show();
+  });
 });

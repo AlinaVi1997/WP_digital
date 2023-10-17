@@ -17,19 +17,17 @@
         <?php if (have_rows("increase_items")) : ?>
             <?php while (have_rows("increase_items")) : the_row(); ?>
             <div class="inrease_items">
-                <h3 class="top_number_title title_section"><?php the_sub_field("number") ?> </h3>
+                <h3 class="top_number_title"><?php the_sub_field("number") ?> </h3>
                 <p class="top_number_descr subtitle_section"> <?php the_sub_field("description") ?> </p>
         </div>    
             <?php endwhile; ?>
         <?php endif; ?>
         </div>
-        <button class="top_btn">
-            <?php the_field ('top_btn');?>
-        </button>
+        <?php the_field ('top_btn');?>
 
         <!-- items about profit -->
         <div class="profit_items">
-        <?php if (have_rows('profit')) : ?>
+            <?php if (have_rows('profit')) : ?>
             <?php while (have_rows('profit')) : the_row();
                 $attachment_id = get_sub_field('images');
                 $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
@@ -38,7 +36,7 @@
                 <?php// Output the image itself using HTML img tag ?>
                 <div class="d-grid profit_item">
                     <img class="top_icons" src="<?php echo $image_url[0]; ?>" alt="Image" />
-                    <h3 class="profit_title title_section"><?php the_sub_field("titles") ?> </h3>
+                    <h3 class="profit_title"><?php the_sub_field("titles") ?> </h3>
                     <div class="profit_descr subtitle_section"><?php the_sub_field("description") ?> </div>
                 </div>
                 <?php endwhile; ?>
@@ -50,8 +48,14 @@
     <!--CASE STUDIES SECTION -->
 <section class="case_studies_section">
     <div class="container-wrapper">
-        <?php the_field('case_studies_tabs'); ?>
-        <div id="all" class="tabcontent">
+        <div class="tab">
+            <button class="tablinks"  id="tab-1">All</button>
+            <button class="tablinks"  id="tab-2">Marketing</button>
+            <button class="tablinks"  id="tab-3">Branding</button>
+            <button class="tablinks"  id="tab-4">Seo</button>
+            <button class="tablinks"  id="tab-5" >Web</button>
+        </div>
+        <div id="content-1" class="tabcontent">
             <div class="case_studies_wrapper">
                 <div class="left-side">
                     <?php the_field('case_studies_inner'); ?>
@@ -61,7 +65,7 @@
                         <?php if (have_rows('slider_wrapper')) : ?>
                             <?php while (have_rows('slider_wrapper')) : the_row();
                                 $attachment_id = get_sub_field('slider_images');
-                                $image_url = wp_get_attachment_image_src($attachment_id, 'full');
+                                $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
                                 $images = get_sub_field('slider_images');
                                  ?>
                             <?php // Output the image itself using HTML img tag ?>
@@ -72,7 +76,7 @@
                 </div>    
             </div>
         </div>               
-        <div id="market" class="tabcontent">
+        <div id="content-2" class="tabcontent">
             <div class="case_studies_wrapper">
                 <div class="left-side">
                     <?php the_field('case_studies_inner'); ?>
@@ -82,7 +86,7 @@
                         <?php if (have_rows('slider_wrapper')) : ?>
                         <?php while (have_rows('slider_wrapper')) : the_row();
                             $attachment_id = get_sub_field('slider_images');
-                            $image_url = wp_get_attachment_image_src($attachment_id, 'full');
+                            $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
                             $images = get_sub_field('slider_images');
                         ?>
                         <?php // Output the image itself using HTML img tag ?>
@@ -93,7 +97,7 @@
                 </div>    
             </div>
         </div>               
-        <div id="brand" class="tabcontent">
+        <div id="content-3" class="tabcontent">
             <div class="case_studies_wrapper">
                 <div class="left-side">
                     <?php the_field('case_studies_inner'); ?>
@@ -103,7 +107,7 @@
                         <?php if (have_rows('slider_wrapper')) : ?>
                         <?php while (have_rows('slider_wrapper')) : the_row();
                             $attachment_id = get_sub_field('slider_images');
-                            $image_url = wp_get_attachment_image_src($attachment_id, 'full');
+                            $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
                             $images = get_sub_field('slider_images');
                         ?>
                         <?php // Output the image itself using HTML img tag ?>
@@ -114,7 +118,7 @@
                 </div>    
             </div>
         </div>               
-        <div id="seo" class="tabcontent">
+        <div id="content-4" class="tabcontent">
             <div class="case_studies_wrapper">
                 <div class="left-side">
                     <?php the_field('case_studies_inner'); ?>
@@ -124,7 +128,7 @@
                         <?php if (have_rows('slider_wrapper')) : ?>
                         <?php while (have_rows('slider_wrapper')) : the_row();
                             $attachment_id = get_sub_field('slider_images');
-                            $image_url = wp_get_attachment_image_src($attachment_id, 'full');
+                            $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
                             $images = get_sub_field('slider_images');
                         ?>
                         <?php // Output the image itself using HTML img tag ?>
@@ -135,7 +139,7 @@
                 </div>    
             </div>
         </div>               
-        <div id="web" class="tabcontent">
+        <div id="content-5" class="tabcontent">
             <div class="case_studies_wrapper">
                 <div class="left-side">
                     <?php the_field('case_studies_inner'); ?>
@@ -145,7 +149,7 @@
                         <?php if (have_rows('slider_wrapper')) : ?>
                         <?php while (have_rows('slider_wrapper')) : the_row();
                             $attachment_id = get_sub_field('slider_images');
-                            $image_url = wp_get_attachment_image_src($attachment_id, 'full');
+                            $image_url = wp_get_attachment_image_src($attachment_id, 'medium');
                             $images = get_sub_field('slider_images');
                         ?>
                         <?php // Output the image itself using HTML img tag ?>
@@ -192,7 +196,7 @@
     </div>
     <div class="companies_wrapper">
     <div class="container-wrapper">
-        <h1 class="title_section companies_title"><?php echo esc_html( get_field('companies_title') ); ?></h1>
+        <h1 class="companies_title"><?php echo esc_html( get_field('companies_title') ); ?></h1>
             <div class="d-grid companies_items">
                 <?php if (have_rows('companies_images')) : ?>
                 <?php while (have_rows('companies_images')) : the_row();

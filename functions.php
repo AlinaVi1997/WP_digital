@@ -8,6 +8,7 @@ function teamtheme_scripts()
     wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.7.1.min.js', true, '', false);
     wp_enqueue_script('jquery');
   }
+  
   // add style css
   wp_enqueue_style('main', get_stylesheet_uri());
   wp_enqueue_style('team', get_template_directory_uri() . '/style.css', array('main'));
@@ -78,6 +79,7 @@ function load_personal_resources() {
     );
 }
 add_action('wp_enqueue_scripts', 'load_personal_resources');
+
 
 // Bootstrap
 function enqueue_bootstrap() {
