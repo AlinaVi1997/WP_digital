@@ -4,24 +4,20 @@ $(document).ready(function () {
         arrows: false,
         infinite:true,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
+        centerPadding: '60px',
         dots: false,
         variableWidth: true,
         responsive: [
-                {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+            {
+            breakpoint: 761,
+            settings: {
+                rightPadding: '20px',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: true
                 }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
+            },
         ]
     });
 });
@@ -42,3 +38,4 @@ $(document).ready(function() {
     $("#" + contentId).show();
   });
 });
+
